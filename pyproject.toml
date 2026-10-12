@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "videomixer"
+version = "2.7.0"
+description = "Lossless automated audio-finishing for batch-produced videos: duration-matched BGM, SFX cues and voice ducking via a single ffmpeg stream-copy pass."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+videomixer = "videomixer.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/videomixer"]

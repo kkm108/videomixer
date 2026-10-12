@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Tooling / environments
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Workspace media and machine-local state.
+# Regenerate test fixtures with: python tools/generate_fixtures.py --root .
+inputs/
+library/
+sfx/
+outputs/
+metadata/

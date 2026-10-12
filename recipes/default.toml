@@ -1,0 +1,66 @@
+[run]
+versions_per_video = 2
+tolerance = 1.5
+audio_bitrate = "192k"
+
+[style.balanced]
+bgm_gain_db = -16.0
+loudness_lufs = -19.0
+fade_in = 0.8
+fade_out = 1.5
+
+[style.balanced.duck]
+enabled = false
+
+[style.impact]
+bgm_gain_db = -13.0
+loudness_lufs = -17.0
+fade_in = 0.05
+fade_out = 1.2
+
+[style.impact.duck]
+enabled = true
+threshold = 0.05
+ratio = 6.0
+attack_ms = 15
+release_ms = 450
+
+[[style.impact.sfx]]
+pattern = "*"
+at = 0.0
+gain_db = -4.0
+snap = true
+snap_window = 0.6
+
+[style.cinematic]
+bgm_gain_db = -18.0
+loudness_lufs = -21.0
+fade_in = 2.0
+fade_out = 3.0
+
+[style.cinematic.duck]
+enabled = true
+threshold = 0.04
+ratio = 4.0
+attack_ms = 30
+release_ms = 700
+
+[[style.cinematic.sfx]]
+pattern = "impact_*"
+at = -1.2
+gain_db = -8.0
+
+[style.suite]
+bgm_gain_db = -18.0
+loudness_lufs = -21.0
+fade_in = 1.5
+fade_out = 2.5
+movement = 45
+crossfade = 3.0
+
+[style.suite.duck]
+enabled = true
+threshold = 0.04
+ratio = 4.0
+attack_ms = 30
+release_ms = 700
